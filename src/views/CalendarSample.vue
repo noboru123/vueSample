@@ -1,10 +1,6 @@
 <template>
     <div class="myCalendar">
-      <el-calendar
-        :events="events"
-        :event-content="renderEvent"
-        @date-change="handleDateChange"
-      />
+      <el-calendar/>
     </div>
   </template>
   
@@ -18,11 +14,6 @@
             { start: '2025-05-15', title: '活動2' },
           ]
         }
-    },
-    methods: {
-      renderEvent(item) {
-        return h('div', { class: 'my-event' }, event.title)
-      }
     }
   }
   </script>
