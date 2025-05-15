@@ -29,20 +29,20 @@ export default {
     },
     methods: {
         menuClickHandleEvent(item) {
-        const pathMap = {
-            1: '/about',
-            2: '/table',
-            3: '/calendar',
-            4: '/form'
-            // 可依照你的需要增加
-        }
+            const pathMap = {
+                1: '/about',
+                2: '/table',
+                3: '/calendar',
+                4: '/form'
+                // 可依照你的需要增加
+            }
 
-        const path = pathMap[item.id]
-        if (path) {
-            this.$router.push(path)
-        } else {
-            console.warn('無對應路由：', item.id)
-        }
+            const path = pathMap[item.id]
+            if (path) {
+                this.$router.push(path)
+            } else {
+                console.warn('無對應路由：', item.id)
+            }
         }
     }
 };
@@ -57,7 +57,6 @@ export default {
     .menu-bar {
         width: 25%;
     }
-    
 
     .menu-content {
         width: 75%;

@@ -28,33 +28,23 @@
   };
   </script>
   <style lang="scss" scoped>
-
-  a {
-    color: #42b983;
-  }
-  
   .myTable {
     width: 100%;
     padding: 2px;
 
-    ::v-deep *{
-      th {
-        background-color: $primary !important;
-        color: $text_dark;
-      }
+    :deep(.el-table) th {
+      background-color: $primary !important;
+      color: $text_dark;
+    }
 
-      tr {
-        td {
-          background-color: $dark;
-          color: $text_light;
-        }
+    :deep(.el-table) tr td {
+      background-color: $dark;
+      color: $text_light;
+    }
 
-        &:hover td{
-          color: $text_dark;
-        }
-      }
+    :deep(.el-table) tr:hover td {
+      color: $text_dark;
     }
   }
-
   </style>
   

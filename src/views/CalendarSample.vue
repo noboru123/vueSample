@@ -1,6 +1,10 @@
 <template>
-    <div class="calendar">
-      CalendarSample
+    <div class="myCalendar">
+      <el-calendar
+        :events="events"
+        :event-content="renderEvent"
+        @date-change="handleDateChange"
+      />
     </div>
   </template>
   
@@ -9,23 +13,44 @@
     name: "CalendarSample",
     data() {
         return {
-          tableData : [
-            { data1: 'information', data2: 25, data3: '....' },
-            { data3: '....', data4: '99/99/99', data5: 'test' },
-            { data1: '....', data5: 'test' , data6: 0, data7: null},
-            { data1: 'null check'},
+          events  : [
+            { start: '2025-05-01', title: '活動1' },
+            { start: '2025-05-15', title: '活動2' },
           ]
         }
     },
-  };
-  </script>
-  <style scoped>
-  a {
-    color: #42b983;
+    methods: {
+      renderEvent(item) {
+        return h('div', { class: 'my-event' }, event.title)
+      }
+    }
   }
-  
-  .table {
+  </script>
+  <style lang="scss" scoped>
+  $focusBox: #cab573;
+  .myCalendar {
     width: 100%;
+    padding: 2px;
+
+    :deep(.el-calendar__header) {
+      background-color: $primary;
+      color: $text_dark;
+    }
+
+    :deep(.el-calendar__body) {
+      background-color: $dark;
+      color: $text_light;
+    }
+
+    :deep(.el-calendar__body td.current.is-selected) {
+      background-color: $focusBox;
+      color: $text_dark;
+    }
+
+    :deep(.el-calendar__body) td .el-calendar-day:hover {
+      background-color: $focusBox;
+      color: $text_dark;
+    }
   }
   </style>
   
