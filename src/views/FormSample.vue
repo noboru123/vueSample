@@ -1,6 +1,5 @@
 <template>
     <div class="form">
-      FormSample
     </div>
   </template>
   

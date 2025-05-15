@@ -23,7 +23,7 @@
     data() {
       return {
         items: [
-          { id: 1, name: '????' },
+          { id: 1, name: 'About' },
           { id: 2, name: 'TableSample' },
           { id: 3, name: 'CalendarSample' },
           { id: 4, name: 'FormSample' },
