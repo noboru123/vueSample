@@ -1,13 +1,14 @@
 <template>
     <div class="myTable">
       <el-table :data="tableData" style="width: 100%">
-        <el-table-column prop="data1" align="left" label="項目一" />
-        <el-table-column prop="data2" align="center" label="項目二" />
-        <el-table-column prop="data3" label="項目三" />
-        <el-table-column prop="data4" label="Option Four" />
-        <el-table-column prop="data5" align="right" label="Ex 5" width="150" />
-        <el-table-column prop="data6" label="Option 6" />
-        <el-table-column prop="data7" label="項目7" />
+        <el-table-column prop="data1" label="姓名" align="left" />
+        <el-table-column prop="data2" label="年齡" align="center" />
+        <el-table-column prop="data3" label="城市" />
+        <el-table-column prop="data4" label="性別" />
+        <el-table-column prop="data5" label="技能" align="right" width="150" />
+        <el-table-column prop="data6" label="訂閱通知" />
+        <el-table-column prop="data7" label="生日" />
+        <el-table-column prop="data7" label="登記時間" />
       </el-table>
     </div>
   </template>
@@ -25,7 +26,17 @@
           ]
         }
     },
+    mounted() {
+      this.loadLocalData()
+    },
+    methods: {
+      loadLocalData () {
+        let localData = localStorage.getItem('formList')
+        console.log('check formList: ', localData)
+      }
+    }
   };
+
   </script>
   <style lang="scss" scoped>
   .myTable {

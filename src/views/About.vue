@@ -7,7 +7,7 @@
           <div>點擊下側顯示展示功能</div>
         </div>
         <div class="content">
-          <el-collapse v-model="activeNames">
+          <el-collapse>
             <el-collapse-item title="TableSample" name="1">
               <div>Table 元件基本展示</div>
               <div>外型自定義</div>
@@ -31,9 +31,11 @@
   export default {
     name: "About",
   };
+
   </script>
   <style lang="scss" scoped>
   $collapseBox: #cab573;
+
   .myCard {
     width: 100%;
     padding: 2px;
@@ -49,7 +51,6 @@
       :deep(.el-collapse .el-collapse-item .el-collapse-item__header) {
         background-color: $collapseBox;
         color: $text_dark;
-        
         padding: 0 5px;
       }
       
@@ -57,7 +58,6 @@
       :deep(.el-collapse .el-collapse-item .el-collapse-item__content) {
         background-color: $dark;
         color: $text_light;
-        
         padding: 0 5px;
       }
     }

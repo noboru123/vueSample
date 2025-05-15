@@ -31,21 +31,24 @@ export default {
         menuClickHandleEvent(item) {
             const pathMap = {
                 1: '/about',
-                2: '/table',
-                3: '/calendar',
-                4: '/form'
+                2: '/form',
+                3: '/table',
+                4: '/calendar'
                 // 可依照你的需要增加
             }
 
             const path = pathMap[item.id]
             if (path) {
                 this.$router.push(path)
-            } else {
+            }
+
+ else {
                 console.warn('無對應路由：', item.id)
             }
         }
     }
 };
+
 </script>
   
 

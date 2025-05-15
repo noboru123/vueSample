@@ -10,15 +10,17 @@
     data() {
         return {
           events  : [
-            { start: '2025-05-01', title: '活動1' },
-            { start: '2025-05-15', title: '活動2' },
+            {title: '活動1' },
+            {start: '2025-05-15', title: '活動2' },
           ]
         }
     }
   }
+
   </script>
   <style lang="scss" scoped>
   $focusBox: #cab573;
+
   .myCalendar {
     width: 100%;
     padding: 2px;
